@@ -1,7 +1,10 @@
 Vue.component('app-navbar', {
   props:['message'],
+  data:{
+    atext: 'hola'
+  },
   template:`
-  <nav v-once class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav  class="navbar navbar-expand-lg navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -22,7 +25,7 @@ Vue.component('app-navbar', {
           <a class="nav-link" href="products.html">Productos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="services.html">{{ message }}</a>
+          <a class="nav-link " href="services.html">{{ atext }}</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -32,6 +35,7 @@ Vue.component('app-navbar', {
     </div>
   </nav>
   `
+
 })
 
 var app = new Vue({
